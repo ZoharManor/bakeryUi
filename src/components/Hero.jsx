@@ -1,4 +1,5 @@
 import logo from '../assets/lechem_tenne_logo.png';
+import heroVideo from '../assets/coverr-cutting-homemade-bread-2934-1080p.mp4';
 
 export default function Hero() {
   return (
@@ -6,13 +7,14 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center noise-overlay"
       aria-label="ראשי"
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            'url(https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1600)',
-        }}
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(29,46,43,0.55)]" />
