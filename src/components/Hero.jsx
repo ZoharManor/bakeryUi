@@ -44,7 +44,7 @@ export default function Hero() {
       {/* Background video */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         autoPlay
         loop
         muted
