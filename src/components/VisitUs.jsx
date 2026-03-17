@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 const hours = [
-  { days: 'ראשון–חמישי', time: '07:00–17:30' },
-  { days: 'שישי', time: '07:00–15:30' },
+  { days: 'ראשון', time: '07:00–14:00' },
+  { days: 'שני–שישי', time: '07:00–15:00' },
   { days: 'שבת', time: 'סגור' },
 ];
 
@@ -45,11 +45,11 @@ export default function VisitUs() {
                 טלפון
               </h3>
               <a
-                href="tel:052-6639913"
+                href="tel:072-3957616"
                 className="text-gold font-semibold hover:text-gold-dark transition-colors"
                 dir="ltr"
               >
-                052-6639913
+                072-3957616
               </a>
             </div>
 

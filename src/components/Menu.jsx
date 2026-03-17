@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import { breads, pastries, cafe, breakfast } from '../data/menuItems';
+import { breads, pastries, cafe, sandwiches } from '../data/menuItems';
 
 const tabs = [
   { key: 'breads', label: 'לחמים', data: breads },
+  { key: 'sandwiches', label: 'כריכים', data: sandwiches },
   { key: 'pastries', label: 'מאפים', data: pastries },
   { key: 'cafe', label: 'בית קפה', data: cafe },
-  { key: 'breakfast', label: 'ארוחות בוקר', data: breakfast },
 ];
 
 export default function Menu() {

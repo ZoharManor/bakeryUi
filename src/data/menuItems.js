@@ -1,38 +1,38 @@
 export const breads = [
   {
-    name: 'לחם מחמצת קלאסי',
-    description: 'לחם שאור בעבודת יד, קרום פריך ולב אוורירי',
+    name: 'לחם כפרי',
+    description: 'לחם מחמצת קלאסי בעבודת יד, קרום פריך ולב אוורירי',
     price: 38,
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400',
   },
   {
-    name: 'לחם כוסמין מלא',
-    description: 'מקמח כוסמין מורשת, עשיר בטעם ומזין',
+    name: 'לחם פולנטה',
+    description: 'לחם מחמצת עם פולנטה, טעם עשיר ומרקם ייחודי',
     price: 42,
     image: 'https://images.unsplash.com/photo-1530648672449-81f6c723e2f1?w=400',
   },
   {
-    name: 'לחם שיפון כהה',
-    description: 'שיפון 100% עם גרעינים, צפוף ומשביע',
+    name: 'לחם דגנים',
+    description: 'לחם מחמצת עם תערובת דגנים וגרעינים',
     price: 40,
     image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400',
   },
   {
-    name: 'לחם זיתים ורוזמרין',
-    description: 'מחמצת עם זיתי קלמטה וענפי רוזמרין טריים',
+    name: 'לחם חמוציות-אגוזים',
+    description: 'מחמצת עם חמוציות ואגוזים, מתוק-מלוח מושלם',
     price: 46,
     image: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400',
   },
   {
-    name: 'חלה שבת מהודרת',
-    description: 'קלועה, רכה, מתוקה קלות עם שומשום',
-    price: 35,
+    name: 'לחם כוסמין',
+    description: 'מקמח כוסמין מורשת, עשיר בטעם ומזין',
+    price: 42,
     image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400',
   },
   {
-    name: 'באגט גליל',
-    description: 'בצק פשוט, אפייה ארוכה, פריכות מושלמת',
-    price: 22,
+    name: 'לחם מלא עם פרג',
+    description: 'לחם מקמח מלא עם גרעיני פרג, בריא וטעים',
+    price: 40,
     image: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400',
   },
 ];
@@ -115,29 +115,35 @@ export const cafe = [
   },
 ];
 
-export const breakfast = [
+export const sandwiches = [
   {
-    name: 'ארוחת אופה',
-    description: 'חלת יום, חמאה, ריבה תוצרת בית, גבינה לבנה, ביצה',
-    price: 58,
+    name: 'כריך חביתה',
+    description: 'חביתה טרייה בלחם מחמצת',
+    price: 42,
     image: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=400',
   },
   {
-    name: 'ארוחת סלט + לחם',
-    description: 'סלט עונתי טרי עם פרוסות לחם מחמצת',
-    price: 52,
+    name: 'כריך סלמון',
+    description: 'סלמון עם קרם פרש ופסטו צלפים',
+    price: 54,
     image: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=400',
   },
   {
-    name: 'כריך מיוחד',
-    description: 'לחם מחמצת, אבוקדו, ביצה עלומה, דוקא',
+    name: 'כריך אנטיפסטי',
+    description: 'אנטיפסטי עם קרם פטה',
     price: 48,
     image: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=400',
   },
   {
-    name: 'כריך סמון + גבינה',
-    description: 'פילה סמון מעושן, גבינת שמנת, שמיר',
-    price: 54,
+    name: 'כריך סלט ביצים',
+    description: 'סלט ביצים עשיר בלחם טרי',
+    price: 42,
+    image: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=400',
+  },
+  {
+    name: 'כריך ארטישוק',
+    description: 'ארטישוק עם מנצ\'גו',
+    price: 48,
     image: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=400',
   },
 ];

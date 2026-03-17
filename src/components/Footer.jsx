@@ -51,8 +51,8 @@ export default function Footer() {
             <h3 className="text-cream font-bold mb-4">צרו קשר</h3>
             <div className="space-y-3 text-cream/60 text-sm">
               <p>
-                <a href="tel:052-6639913" className="hover:text-gold transition-colors" dir="ltr">
-                  052-6639913
+                <a href="tel:072-3957616" className="hover:text-gold transition-colors" dir="ltr">
+                  072-3957616
                 </a>
               </p>
               <p>
