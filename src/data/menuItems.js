@@ -1,10 +1,18 @@
+import lechem_hamuziot from '../assets/לחם חמוציות.png';
+import lechem_kusmin from '../assets/לחם כוסמין.jpg';
+import lechem_pereg from '../assets/לחם פרג.jpg';
+import karich1 from '../assets/כריך 1.jpg';
+import karich2 from '../assets/כריך 2.jpg';
+import karich3 from '../assets/כריך 3.jpg';
+import karich4 from '../assets/כריך 4.jpg';
+
 export const breads = [
   { name: 'לחם כפרי', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400' },
   { name: 'פולנטה', image: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400' },
   { name: 'דגנים', image: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400' },
-  { name: 'חמוציות-אגוזים', image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400' },
-  { name: 'כוסמין', image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400' },
-  { name: 'מלא עם פרג', image: 'https://images.unsplash.com/photo-1530648672449-81f6c723e2f1?w=400' },
+  { name: 'חמוציות-אגוזים', image: lechem_hamuziot },
+  { name: 'כוסמין', image: lechem_kusmin },
+  { name: 'מלא עם פרג', image: lechem_pereg },
 ];
 
 export const pastries = [
@@ -18,9 +26,9 @@ export const pastries = [
 ];
 
 export const sandwiches = [
-  { name: 'חביתה', image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400' },
-  { name: 'סלמון עם קרם פרש ופסטו צלפים', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400' },
-  { name: 'אנטיפסטי עם קרם פטה', image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400' },
-  { name: 'סלט ביצים', image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?w=400' },
+  { name: 'חביתה', image: karich1 },
+  { name: 'סלמון עם קרם פרש ופסטו צלפים', image: karich2 },
+  { name: 'אנטיפסטי עם קרם פטה', image: karich3 },
+  { name: 'סלט ביצים', image: karich4 },
   { name: 'ארטישוק עם מנצ\'גו', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400' },
 ];
