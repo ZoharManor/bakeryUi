@@ -1,39 +1,17 @@
-import { useEffect, useRef } from 'react';
+import { useCallback } from 'react';
 import logo from '../assets/lechem_tenne_logo.png';
 import heroVideo from '../assets/coverr-cutting-homemade-bread-2934-1080p.mp4';
 
 export default function Hero() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
+  // Ref callback — fires synchronously when the video element mounts
+  const videoRefCallback = useCallback((video) => {
     if (!video) return;
-
-    // Set attributes directly on DOM to bypass React's muted bug
     video.setAttribute('muted', '');
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
     video.muted = true;
     video.defaultMuted = true;
-
-    // Attempt autoplay — retry on user interaction if blocked
-    const tryPlay = () => {
-      video.play().catch(() => {
-        const playOnInteraction = () => {
-          video.play().catch(() => {});
-          document.removeEventListener('touchstart', playOnInteraction);
-          document.removeEventListener('scroll', playOnInteraction);
-        };
-        document.addEventListener('touchstart', playOnInteraction, { once: true });
-        document.addEventListener('scroll', playOnInteraction, { once: true });
-      });
-    };
-
-    if (video.readyState >= 2) {
-      tryPlay();
-    } else {
-      video.addEventListener('loadeddata', tryPlay, { once: true });
-    }
+    video.play().catch(() => {});
   }, []);
 
   return (
@@ -43,15 +21,13 @@ export default function Hero() {
     >
       {/* Background video */}
       <video
-        ref={videoRef}
+        ref={videoRefCallback}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
-        disablePictureInPicture
-        disableRemotePlayback
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
