@@ -17,24 +17,64 @@ const frequencyOptions = [
   { value: 'oneoff', label: 'לאירוע חד-פעמי' },
 ];
 
+const WheatIcon = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2 22L16 8" />
+    <path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z" />
+    <path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z" />
+    <path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z" />
+    <path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z" />
+    <path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z" />
+    <path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z" />
+    <path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z" />
+  </svg>
+);
+
+const FlameIcon = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+  </svg>
+);
+
+const TruckIcon = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+    <path d="M15 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 13.52 8H14" />
+    <path d="M22 17v1a1 1 0 0 1-1 1h-1" />
+    <circle cx="7.5" cy="18.5" r="2.5" />
+    <circle cx="17.5" cy="18.5" r="2.5" />
+  </svg>
+);
+
+const ClipboardIcon = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+    <path d="M12 11h4" />
+    <path d="M12 16h4" />
+    <path d="M8 11h.01" />
+    <path d="M8 16h.01" />
+  </svg>
+);
+
 const benefits = [
   {
-    icon: '🌾',
+    icon: <WheatIcon />,
     title: 'קמחי מורשת',
     text: 'לחמים ייחודיים שלא תמצאו בשום מקום אחר',
   },
   {
-    icon: '🔥',
+    icon: <FlameIcon />,
     title: 'תנור אבן עצי',
     text: 'קרום ייחודי, ריח ושחמת שלא ניתן לזייף',
   },
   {
-    icon: '🚚',
+    icon: <TruckIcon />,
     title: 'אספקה שבועית',
     text: 'אנחנו מגיעים אליכם, טרי מהאפייה',
   },
   {
-    icon: '📋',
+    icon: <ClipboardIcon />,
     title: 'הזמנה מותאמת',
     text: 'סוג, כמות ותאריך — הכל לפי הצורך שלכם',
   },
@@ -156,7 +196,7 @@ export default function BreadOrder() {
                   key={i}
                   className="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-gold/10"
                 >
-                  <span className="text-3xl flex-shrink-0">{b.icon}</span>
+                  <span className="flex-shrink-0">{b.icon}</span>
                   <div>
                     <h4 className="font-bold text-primary-dark mb-1">{b.title}</h4>
                     <p className="text-primary-dark/60 text-sm">{b.text}</p>
