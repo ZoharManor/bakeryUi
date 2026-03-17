@@ -7,10 +7,32 @@ export default function Hero() {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (video) {
-      video.muted = true;
-      video.playsInline = true;
-      video.play().catch(() => {});
+    if (!video) return;
+
+    // Set attributes directly on DOM to bypass React's muted bug
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.muted = true;
+    video.defaultMuted = true;
+
+    // Attempt autoplay — retry on user interaction if blocked
+    const tryPlay = () => {
+      video.play().catch(() => {
+        const playOnInteraction = () => {
+          video.play().catch(() => {});
+          document.removeEventListener('touchstart', playOnInteraction);
+          document.removeEventListener('scroll', playOnInteraction);
+        };
+        document.addEventListener('touchstart', playOnInteraction, { once: true });
+        document.addEventListener('scroll', playOnInteraction, { once: true });
+      });
+    };
+
+    if (video.readyState >= 2) {
+      tryPlay();
+    } else {
+      video.addEventListener('loadeddata', tryPlay, { once: true });
     }
   }, []);
 
@@ -23,13 +45,16 @@ export default function Hero() {
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
-        src={heroVideo}
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
-      />
+        disablePictureInPicture
+        disableRemotePlayback
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(29,46,43,0.55)]" />
 
