@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { breads, pastries, cafe, sandwiches } from '../data/menuItems';
+import { breads, pastries, sandwiches } from '../data/menuItems';
 
 const tabs = [
   { key: 'breads', label: 'לחמים', data: breads },
   { key: 'sandwiches', label: 'כריכים', data: sandwiches },
   { key: 'pastries', label: 'מאפים', data: pastries },
-  { key: 'cafe', label: 'בית קפה', data: cafe },
 ];
 
 export default function Menu() {
@@ -53,35 +52,24 @@ export default function Menu() {
           ))}
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {currentTab.data.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group"
-            >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-5">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-heading text-lg font-bold text-cream">
-                    {item.name}
-                  </h3>
-                  <span className="text-gold font-bold text-lg whitespace-nowrap mr-3">
-                    ₪{item.price}
-                  </span>
-                </div>
-                <p className="text-cream/60 text-sm">{item.description}</p>
-              </div>
-            </div>
-          ))}
+        {/* Items list */}
+        <div className="max-w-2xl mx-auto">
+          <ul className="space-y-3">
+            {currentTab.data.map((item, i) => (
+              <li
+                key={i}
+                className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 text-cream font-heading text-lg font-semibold text-center"
+              >
+                {item.name}
+              </li>
+            ))}
+          </ul>
         </div>
+
+        {/* Disclaimer */}
+        <p className="text-center text-cream/50 text-sm mt-10">
+          התפריט המלא ומחירים עדכניים — בטלפון או בביקור במאפייה
+        </p>
       </div>
     </section>
   );
