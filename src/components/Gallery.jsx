@@ -1,15 +1,24 @@
 import { useEffect, useRef } from 'react';
+import photo1 from '../assets/photo1.jpg';
+import photo2 from '../assets/photo2.jpg';
+import photo3 from '../assets/photo3.jpg';
+import photo4 from '../assets/photo4.jpg';
+import photo5 from '../assets/photo5.jpg';
+import photo6 from '../assets/photo6.jpg';
+import photo7 from '../assets/photo7.jpg';
+import photo8 from '../assets/photo8.jpg';
+import photo9 from '../assets/photo9.jpg';
 
 const images = [
-  { src: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600', alt: 'לחם מחמצת טרי' },
-  { src: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600', alt: 'כיכרות לחם אומנותיות' },
-  { src: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600', alt: 'קרואסונים חמאתיים' },
-  { src: 'https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=600', alt: 'קפה איכותי' },
-  { src: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600', alt: 'מאפים מהתנור' },
-  { src: 'https://images.unsplash.com/photo-1530648672449-81f6c723e2f1?w=600', alt: 'לחם כפרי' },
-  { src: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600', alt: 'דניש ומאפים' },
-  { src: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600', alt: 'באגט טרי' },
-  { src: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=600', alt: 'פנים המאפייה' },
+  { src: photo1, alt: 'לחם טנא - תמונה 1' },
+  { src: photo2, alt: 'לחם טנא - תמונה 2' },
+  { src: photo3, alt: 'לחם טנא - תמונה 3' },
+  { src: photo4, alt: 'לחם טנא - תמונה 4' },
+  { src: photo5, alt: 'לחם טנא - תמונה 5' },
+  { src: photo6, alt: 'לחם טנא - תמונה 6' },
+  { src: photo7, alt: 'לחם טנא - תמונה 7' },
+  { src: photo8, alt: 'לחם טנא - תמונה 8' },
+  { src: photo9, alt: 'לחם טנא - תמונה 9' },
 ];
 
 export default function Gallery() {
