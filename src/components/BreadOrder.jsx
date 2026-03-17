@@ -143,7 +143,7 @@ export default function BreadOrder() {
   };
 
   const inputClass = (field) =>
-    `w-full px-4 py-3 rounded-lg border ${
+    `w-full max-w-full box-border px-4 py-3 rounded-lg border ${
       errors[field] ? 'border-red-500' : 'border-gray-200'
     } focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold text-primary-dark bg-white text-sm`;
 
@@ -250,7 +250,7 @@ export default function BreadOrder() {
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="bg-white rounded-xl shadow-lg p-6 lg:p-8"
+                className="bg-white rounded-xl shadow-lg p-6 lg:p-8 overflow-hidden"
               >
                 <h3 className="font-heading text-xl font-bold text-primary-dark mb-6">
                   שלחו לנו הזמנה

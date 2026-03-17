@@ -95,7 +95,7 @@ export default function VisitUs() {
           {/* Map */}
           <div className="rounded-xl overflow-hidden shadow-sm h-80 lg:h-auto min-h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.82!2d35.1075!3d33.0625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDAzJzQ1LjAiTiAzNcKwMDYnMjcuMCJF!5e0!3m2!1siw!2sil!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.82!2d35.1075!3d33.0625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c32a7e9a29c11%3A0xa0164c8ea0d41bf1!2sLechem%20Tenne!5e0!3m2!1siw!2sil!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}

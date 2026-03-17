@@ -1,7 +1,19 @@
+import { useEffect, useRef } from 'react';
 import logo from '../assets/lechem_tenne_logo.png';
 import heroVideo from '../assets/coverr-cutting-homemade-bread-2934-1080p.mp4';
 
 export default function Hero() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.playsInline = true;
+      video.play().catch(() => {});
+    }
+  }, []);
+
   return (
     <section
       className="relative min-h-screen flex items-center justify-center noise-overlay"
@@ -9,12 +21,14 @@ export default function Hero() {
     >
       {/* Background video */}
       <video
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src={heroVideo}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(29,46,43,0.55)]" />
