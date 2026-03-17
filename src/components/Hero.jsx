@@ -1,36 +1,28 @@
-import { useCallback } from 'react';
 import logo from '../assets/lechem_tenne_logo.png';
 import heroVideo from '../assets/coverr-cutting-homemade-bread-2934-1080p.mp4';
 
 export default function Hero() {
-  // Ref callback — fires synchronously when the video element mounts
-  const videoRefCallback = useCallback((video) => {
-    if (!video) return;
-    video.setAttribute('muted', '');
-    video.setAttribute('playsinline', '');
-    video.setAttribute('webkit-playsinline', '');
-    video.muted = true;
-    video.defaultMuted = true;
-    video.play().catch(() => {});
-  }, []);
-
   return (
     <section
       className="relative min-h-screen flex items-center justify-center noise-overlay"
       aria-label="ראשי"
     >
-      {/* Background video */}
-      <video
-        ref={videoRefCallback}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      {/* Background video — raw HTML to ensure muted attribute is parsed by iOS Safari */}
+      <div
+        className="absolute inset-0"
+        dangerouslySetInnerHTML={{
+          __html: `<video
+            class="w-full h-full object-cover pointer-events-none"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"
+            autoplay
+            loop
+            muted
+            playsinline
+            webkit-playsinline
+            preload="auto"
+          ><source src="${heroVideo}" type="video/mp4" /></video>`,
+        }}
+      />
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(29,46,43,0.55)]" />
 
